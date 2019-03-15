@@ -35,6 +35,32 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="{% static 'images/favicons/ms-icon-144x144.png' %}">
   <meta name="theme-color" content="#ffffff">
+  <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+   <script type="text/javascript">
+       window.cookieconsent_options = {
+           "message":"This website uses cookies to ensure you get the best experience on our website",
+           "dismiss":"Got it!",
+           "learnMore":"More info",
+           "link":"/imprint",
+           "theme":"dark-bottom"};
+   </script>
+   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+   <!-- End Cookie Consent plugin -->
+   <!-- Matomo -->
+     <script type="text/javascript">
+       var _paq = _paq || [];
+       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+       _paq.push(['trackPageView']);
+       _paq.push(['enableLinkTracking']);
+       (function() {
+         var u="//matomo.acdh.oeaw.ac.at/";
+         _paq.push(['setTrackerUrl', u+'piwik.php']);
+         _paq.push(['setSiteId', '23']);
+         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+       })();
+     </script>
+   <!-- End Matomo Code -->
   {% block header %}{% endblock %}
   {% azure_appinsights %}
 </head>
@@ -68,7 +94,7 @@
               </a>
             </div>
           </div>
-          <a class="navbar-item" href="https://github.com/chakki-works/doccano">
+          <a class="navbar-item" href="https://github.com/acdh-oeaw/doccano">
             <span>GitHub</span>
           </a>
           {% endif %}
@@ -92,7 +118,7 @@
   </nav>
 
   {% block content %}{% endblock %}
-  
+
   {% block footer %}{% endblock %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
   <script>

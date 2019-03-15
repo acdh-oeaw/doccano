@@ -201,3 +201,5 @@ pip-selfcheck.json
 node_modules/
 app/staticfiles/
 app/server/static/bundle/
+/app/app/local.py
+/app/app/server.py

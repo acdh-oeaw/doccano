@@ -4,11 +4,13 @@ from .views import IndexView
 from .views import ProjectView, DatasetView, DataUpload, LabelView, StatsView, GuidelineView
 from .views import ProjectsView, DataDownload
 from .views import DemoTextClassification, DemoNamedEntityRecognition, DemoTranslation
+from .views import ImprintView
 
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('projects/', ProjectsView.as_view(), name='projects'),
+    path('imprint/', ImprintView.as_view(), name='imprint'),
     path('projects/<int:project_id>/docs/download',
          DataDownload.as_view(), name='download'),
     path('projects/<int:project_id>/',

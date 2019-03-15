@@ -88,3 +88,7 @@ class DemoNamedEntityRecognition(TemplateView):
 
 class DemoTranslation(TemplateView):
     template_name = 'demo/demo_translation.html'
+
+
+class ImprintView(TemplateView):
+    template_name = 'imprint.html'
